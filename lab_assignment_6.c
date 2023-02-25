@@ -2,7 +2,32 @@
 
 int search(int numbers[], int low, int high, int value) 
 {
-	return -1;
+	
+	if (low >high) {
+	
+		    return -1;
+		    
+	}
+	
+        int total =low + high
+	    int avg =total / 2;
+	
+	if (numbers[avg] ==value) {
+
+		    return avg;
+		    
+	} 
+	if (numbers[avg] <value) {
+		
+		    return search(numbers, avg + 1, high, value);
+		
+	} 
+	if (numbers[avg] >value) {
+	    
+		    return search(numbers, low, avg - 1, value);
+		
+	}
+	
 }
 
 void printArray(int numbers[], int sz)
